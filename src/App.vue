@@ -45,12 +45,12 @@
 //      });
 
       //修改get文件路径
-      this.$http.get('/api/seller').then((res) => {
-        res = res.data;
-        if(res.errno === ERR_OK) {
-          this.seller = res.data;
-          console.log(res);
-        }
+      this.$http.get("https://www.easy-mock.com/mock/5947c9998ac26d795f405fbb/sell/sell").then((res) => {
+        // res = res.data.seller;
+        // if(res.errno === ERR_OK) {
+          this.seller = res.data.seller;
+          // console.log(this.seller);
+        // }
       });
     },
     components: {

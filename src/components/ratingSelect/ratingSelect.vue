@@ -25,7 +25,7 @@
             },
             selectType:{
                 type:Number,
-                default:2
+                default:ALL
             },
             onlyContent:{
                 type:Boolean,

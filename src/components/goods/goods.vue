@@ -77,6 +77,7 @@
             },
             selectFoods(){
                 let foods = [];
+                // console.log(this.goods);
                 this.goods.forEach((good) => {
                     good.foods.forEach((food) => {
                         if(food.count){
@@ -104,9 +105,11 @@
 //
 //                }
 //            });
-            this.$http.get(`/static/goods.json`).then((response) => {
+            this.$http.get("https://www.easy-mock.com/mock/5947c9998ac26d795f405fbb/sell/sell").then((res) => {
                 //response = response.body;
-                this.goods = response.data;
+
+                this.goods = res.data.goods;
+                // console.log(res);
                 this.$nextTick(() => {
                   this._initScroll();
                   //计算索引高度，实现联动效果

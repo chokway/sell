@@ -101,10 +101,10 @@
           }
         },
         created(){
-            this.$http.get('/static/ratings.json').then(response => {
+            this.$http.get("https://www.easy-mock.com/mock/5947c9998ac26d795f405fbb/sell/sell").then(res => {
               //response = response.body;
               //if(response.errno === ERR_OK){
-                  this.ratings = response.data;
+                  this.ratings = res.data.ratings;
                   this.$nextTick(() => {
                       this.scroll = new Bscroll(this.$refs.ratings,{
                           click:true
